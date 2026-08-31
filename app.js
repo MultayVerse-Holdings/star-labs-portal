@@ -20,6 +20,26 @@ const titles = {
   account: 'Account'
 };
 
+function normalizeAdzillaTerminology() {
+  const replacements = new Map([
+    ['East Orlando Adzilla — September Drop', 'East Orlando Adzilla — September Campaign'],
+    ['Medium ad · September Drop', 'Medium ad · September Campaign'],
+    ['East Orlando — September Drop', 'East Orlando — September Campaign'],
+    ['Browse upcoming drops', 'Browse upcoming campaigns']
+  ]);
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+  textNodes.forEach(node => {
+    const value = node.nodeValue.trim();
+    if (replacements.has(value)) {
+      node.nodeValue = node.nodeValue.replace(value, replacements.get(value));
+    }
+  });
+}
+
 function showToast(message) {
   toast.textContent = message;
   toast.classList.add('show');
@@ -124,6 +144,8 @@ document.addEventListener('click', event => {
     sidebar.classList.remove('open');
   }
 });
+
+normalizeAdzillaTerminology();
 
 if (localStorage.getItem('starLabsPortalDemoSession') === '1') {
   enterPortal();
