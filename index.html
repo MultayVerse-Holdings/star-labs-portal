@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff8ef" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Star Labs Client Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="loginView" class="login-shell">
+    <section class="login-brand" aria-hidden="true">
+      <a class="wordmark" href="https://hellostarlabs.com">STAR LABS</a>
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="spark"></div>
+      <div class="brand-copy">
+        <p class="eyebrow light">Client workspace</p>
+        <h1>Everything<br />we're building,<br /><span>in one place.</span></h1>
+        <p>Track projects, review Adzilla campaigns, approve artwork, manage files, and keep billing organized.</p>
+      </div>
+    </section>
+
+    <main class="login-panel">
+      <form id="loginForm" class="login-card">
+        <div class="mini-brand">STAR LABS</div>
+        <p class="eyebrow">Client portal</p>
+        <h2>Welcome back.</h2>
+        <p class="muted">Sign in to view your Star Labs workspace.</p>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@business.com" required />
+
+        <div class="password-row">
+          <label for="password">Password</label>
+          <button class="text-button" type="button" id="forgotPassword">Forgot password?</button>
+        </div>
+        <input id="password" type="password" placeholder="••••••••" required />
+
+        <button class="primary-button full" type="submit">Sign in <span>→</span></button>
+        <p class="tiny-note">MVP preview: sign in with any email and password to enter the portal.</p>
+      </form>
+    </main>
+  </div>
+
+  <div id="portalView" class="portal-shell hidden">
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-brand">
+          <span class="brand-star">✦</span>
+          <span>STAR LABS</span>
+        </div>
+
+        <nav class="nav-list" aria-label="Client portal navigation">
+          <button class="nav-item active" data-view="dashboard"><span>⌂</span> Dashboard</button>
+          <button class="nav-item" data-view="projects"><span>▦</span> Projects</button>
+          <button class="nav-item" data-view="adzilla"><span>◎</span> Adzilla</button>
+          <button class="nav-item" data-view="files"><span>□</span> Files</button>
+          <button class="nav-item" data-view="billing"><span>◇</span> Billing</button>
+          <button class="nav-item" data-view="account"><span>⚙</span> Account</button>
+        </nav>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="support-card">
+          <span class="support-icon">✦</span>
+          <div>
+            <strong>Need something?</strong>
+            <p>Send Star Labs a message and we'll get it handled.</p>
+            <button id="supportButton" class="text-button light-text" type="button">Contact support →</button>
+          </div>
+        </div>
+
+        <button id="logoutButton" class="logout-button" type="button">Sign out</button>
+      </div>
+    </aside>
+
+    <div class="mobile-topbar">
+      <button id="menuButton" class="menu-button" type="button" aria-label="Open navigation">☰</button>
+      <div class="mobile-brand">STAR LABS</div>
+      <div class="avatar small">TB</div>
+    </div>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="pageEyebrow">Client portal</p>
+          <h2 id="pageTitle">Dashboard</h2>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" aria-label="Notifications">○</button>
+          <div class="client-chip">
+            <div class="avatar">TB</div>
+            <div>
+              <strong>Demo Business</strong>
+              <span>Client account</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="dashboard" class="view active-view">
+        <div class="welcome-row">
+          <div>
+            <h3>Good evening, Demo Business.</h3>
+            <p class="muted">Here's what's happening with your Star Labs work.</p>
+          </div>
+          <button class="secondary-button" data-jump="projects" type="button">View all projects</button>
+        </div>
+
+        <div class="stat-grid">
+          <article class="stat-card">
+            <span class="stat-label">Active projects</span>
+            <strong>2</strong>
+            <span class="stat-meta">1 needs your attention</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Adzilla campaigns</span>
+            <strong>1</strong>
+            <span class="stat-meta">Artwork due soon</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Files shared</span>
+            <strong>8</strong>
+            <span class="stat-meta">3 new this month</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Open balance</span>
+            <strong>$299</strong>
+            <span class="stat-meta">Due Sep 8</span>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="panel featured-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Needs attention</p>
+                <h4>East Orlando Adzilla — September Drop</h4>
+              </div>
+              <span class="status-pill warning">Artwork needed</span>
+            </div>
+            <div class="campaign-summary">
+              <div><span>Ad size</span><strong>Medium</strong></div>
+              <div><span>Reach</span><strong>5,000 homes</strong></div>
+              <div><span>Estimated mail date</span><strong>Sep 28</strong></div>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-label"><span>Campaign progress</span><strong>2 of 7 steps</strong></div>
+              <div class="progress-track"><span style="width: 29%"></span></div>
+            </div>
+            <div class="button-row">
+              <button class="primary-button" data-jump="adzilla" type="button">Upload artwork <span>→</span></button>
+              <button class="ghost-button" data-jump="adzilla" type="button">View campaign</button>
+            </div>
+          </article>
+
+          <article class="panel activity-panel">
+            <div class="panel-heading compact">
+              <h4>Recent activity</h4>
+              <button class="text-button" type="button">View all</button>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item"><span class="activity-dot"></span><div><strong>Adzilla reservation confirmed</strong><p>Medium ad · September Drop</p><small>Today</small></div></div>
+              <div class="activity-item"><span class="activity-dot"></span><div><strong>Website concept uploaded</strong><p>Homepage direction 02</p><small>Aug 30</small></div></div>
+              <div class="activity-item"><span class="activity-dot"></span><div><strong>Invoice #SL-1042 created</strong><p>$299 due Sep 8</p><small>Aug 30</small></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="view">
+        <div class="section-heading">
+          <div><p class="muted">Your active and completed Star Labs work.</p></div>
+          <button class="primary-button" type="button">Start a project</button>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-top"><span class="project-icon web">WEB</span><span class="status-pill info">In progress</span></div>
+            <h4>Website Refresh</h4>
+            <p>Homepage and services page redesign.</p>
+            <div class="project-progress"><div><span>Progress</span><strong>65%</strong></div><div class="progress-track"><span style="width:65%"></span></div></div>
+            <button class="ghost-button full" type="button">Open project</button>
+          </article>
+          <article class="project-card">
+            <div class="project-top"><span class="project-icon ad">AD</span><span class="status-pill warning">Action needed</span></div>
+            <h4>Adzilla — September</h4>
+            <p>East Orlando · Medium ad · 5,000 homes.</p>
+            <div class="project-progress"><div><span>Progress</span><strong>29%</strong></div><div class="progress-track"><span style="width:29%"></span></div></div>
+            <button class="ghost-button full" data-jump="adzilla" type="button">Open campaign</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="adzilla" class="view">
+        <div class="adzilla-hero">
+          <div>
+            <p class="eyebrow">Adzilla Direct Mail by Star Labs</p>
+            <h3>East Orlando — September Drop</h3>
+            <p>One shared mailer. Thousands of local mailboxes. Your business gets a dedicated place on the page.</p>
+          </div>
+          <span class="status-pill warning">Artwork needed</span>
+        </div>
+
+        <div class="campaign-stepper" aria-label="Campaign progress">
+          <div class="step complete"><span>1</span><p>Reserved</p></div>
+          <div class="step complete"><span>2</span><p>Payment</p></div>
+          <div class="step current"><span>3</span><p>Artwork</p></div>
+          <div class="step"><span>4</span><p>Proof</p></div>
+          <div class="step"><span>5</span><p>Approved</p></div>
+          <div class="step"><span>6</span><p>Printing</p></div>
+          <div class="step"><span>7</span><p>Mailed</p></div>
+        </div>
+
+        <div class="two-column">
+          <article class="panel">
+            <div class="panel-heading compact"><h4>Your campaign</h4><span class="status-pill info">Medium ad</span></div>
+            <dl class="detail-list">
+              <div><dt>Area</dt><dd>East Orlando</dd></div>
+              <div><dt>Estimated reach</dt><dd>5,000 households</dd></div>
+              <div><dt>Mail date</dt><dd>September 28, 2026</dd></div>
+              <div><dt>Ad size</dt><dd>Medium</dd></div>
+              <div><dt>Design</dt><dd>Client-supplied artwork</dd></div>
+              <div><dt>Payment</dt><dd><span class="status-pill success">Paid</span></dd></div>
+            </dl>
+          </article>
+
+          <article class="panel upload-panel">
+            <div>
+              <p class="eyebrow">Next step</p>
+              <h4>Send us your artwork.</h4>
+              <p class="muted">Upload your finished ad, logo, photos, or brand assets. We'll prepare your proof from what you send.</p>
+            </div>
+            <label class="upload-box" for="artworkUpload">
+              <span class="upload-icon">↑</span>
+              <strong>Drop files here or browse</strong>
+              <small>PDF, PNG, JPG, SVG · max 20 MB each</small>
+              <input id="artworkUpload" type="file" multiple accept=".pdf,.png,.jpg,.jpeg,.svg" />
+            </label>
+            <div id="uploadList" class="upload-list"></div>
+            <div class="button-row">
+              <button id="submitArtwork" class="primary-button" type="button">Submit artwork</button>
+              <button id="requestDesign" class="ghost-button" type="button">Have Star Labs design it — $75</button>
+            </div>
+          </article>
+        </div>
+
+        <article class="panel inventory-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Upcoming availability</p>
+              <h4>Reserve another spot</h4>
+            </div>
+            <button class="secondary-button" type="button">Browse upcoming drops</button>
+          </div>
+          <div class="inventory-grid">
+            <div class="inventory-card"><span>X-Small</span><strong>2</strong><small>spots per mailer</small></div>
+            <div class="inventory-card"><span>Small</span><strong>4</strong><small>spots per mailer</small></div>
+            <div class="inventory-card popular"><em>Most popular</em><span>Medium</span><strong>5</strong><small>spots per mailer</small></div>
+            <div class="inventory-card"><span>Large</span><strong>4</strong><small>spots per mailer</small></div>
+            <div class="inventory-card premium"><em>Only one</em><span>X-Large</span><strong>1</strong><small>spot per mailer</small></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="files" class="view">
+        <div class="section-heading">
+          <p class="muted">Assets, proofs, deliverables, and documents shared with Star Labs.</p>
+          <button class="primary-button" id="uploadFileButton" type="button">Upload file</button>
+        </div>
+        <article class="panel table-panel">
+          <div class="file-row header"><span>Name</span><span>Project</span><span>Updated</span><span></span></div>
+          <div class="file-row"><span><b>Homepage-Concept-02.pdf</b><small>PDF · 4.8 MB</small></span><span>Website Refresh</span><span>Aug 30</span><button class="text-button">View</button></div>
+          <div class="file-row"><span><b>Brand-Logo-Primary.svg</b><small>SVG · 84 KB</small></span><span>Website Refresh</span><span>Aug 29</span><button class="text-button">View</button></div>
+          <div class="file-row"><span><b>Adzilla-Specs.pdf</b><small>PDF · 1.2 MB</small></span><span>Adzilla</span><span>Aug 28</span><button class="text-button">View</button></div>
+        </article>
+      </section>
+
+      <section id="billing" class="view">
+        <div class="billing-summary">
+          <article><span>Outstanding balance</span><strong>$299.00</strong><small>Due Sep 8, 2026</small></article>
+          <article><span>Paid this year</span><strong>$748.00</strong><small>2 invoices</small></article>
+          <article><span>Payment method</span><strong>•••• 4242</strong><small>Visa</small></article>
+        </div>
+        <article class="panel table-panel">
+          <div class="panel-heading compact"><h4>Invoices</h4></div>
+          <div class="invoice-row header"><span>Invoice</span><span>Description</span><span>Date</span><span>Amount</span><span>Status</span></div>
+          <div class="invoice-row"><span><b>#SL-1042</b></span><span>Adzilla — Medium Ad</span><span>Aug 30</span><span>$299</span><span><span class="status-pill warning">Due</span></span></div>
+          <div class="invoice-row"><span><b>#SL-1037</b></span><span>Website Refresh Deposit</span><span>Aug 22</span><span>$449</span><span><span class="status-pill success">Paid</span></span></div>
+        </article>
+      </section>
+
+      <section id="account" class="view">
+        <div class="settings-grid">
+          <form class="panel settings-form" id="profileForm">
+            <div class="panel-heading compact"><h4>Business profile</h4></div>
+            <label>Business name<input type="text" value="Demo Business" /></label>
+            <label>Contact name<input type="text" value="Taylor" /></label>
+            <label>Email<input type="email" value="hello@example.com" /></label>
+            <label>Phone<input type="tel" value="(407) 555-0199" /></label>
+            <button class="primary-button" type="submit">Save changes</button>
+          </form>
+
+          <form class="panel settings-form" id="securityForm">
+            <div class="panel-heading compact"><h4>Security</h4></div>
+            <label>Current password<input type="password" placeholder="Current password" /></label>
+            <label>New password<input type="password" placeholder="New password" /></label>
+            <label>Confirm new password<input type="password" placeholder="Confirm new password" /></label>
+            <button class="secondary-button" type="submit">Update password</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
