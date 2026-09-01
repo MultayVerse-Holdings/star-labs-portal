@@ -1,0 +1,60 @@
+:root{
+  --star-navy:#082644;
+  --star-navy-deep:#051a30;
+  --star-blue:#1478e8;
+  --star-blue-soft:#eaf3ff;
+  --star-orange:#ff5a1f;
+  --star-gold:#ffb33d;
+  --star-peach:#ffd9bf;
+  --star-cream:#fff9f2;
+  --star-paper:#fffdf9;
+  --star-ink:#10253a;
+  --star-muted:#64788c;
+  --star-line:#dce5ec;
+  --star-gradient:linear-gradient(90deg,#ff5a1f 0%,#ff8a26 52%,#ffb33d 100%);
+}
+
+html,body{background:var(--star-cream);color:var(--star-ink)}
+body{--ink:var(--star-ink);--muted:var(--star-muted);--cream:var(--star-cream);--paper:var(--star-paper);--orange:var(--star-orange);--orange-soft:#fff0e8;--gold:var(--star-gold);--dark:var(--star-navy-deep);--line:var(--star-line);--blue:var(--star-blue);--blue-bg:var(--star-blue-soft);--gradient:var(--star-gradient)}
+::selection{background:var(--star-blue);color:#fff}
+.login-brand{background:radial-gradient(circle at 38% 48%,rgba(20,120,232,.26),transparent 27%),radial-gradient(circle at 65% 62%,rgba(255,90,31,.18),transparent 30%),var(--star-navy-deep)}
+.login-brand .orbit{border-color:rgba(20,120,232,.72);box-shadow:0 0 34px rgba(20,120,232,.08)}
+.login-brand .orbit-two{border-color:rgba(255,90,31,.66)}
+.login-brand .spark{background:linear-gradient(135deg,var(--star-gold),var(--star-orange),var(--star-blue));filter:drop-shadow(0 0 24px rgba(20,120,232,.34))}
+.brand-copy h1 span{color:#ff7b3f}.brand-copy>p:last-child{color:#c7d4df}
+.login-panel{background:radial-gradient(circle at 80% 18%,rgba(20,120,232,.11),transparent 26%),linear-gradient(145deg,var(--star-paper),#f6ede4)}
+.login-card{border-color:rgba(8,38,68,.12);box-shadow:0 24px 80px rgba(8,38,68,.09)}
+.login-card h2,.mini-brand{color:var(--star-navy)}
+.login-card input,.settings-form input{border-color:#ccd9e3;color:var(--star-ink)}
+.login-card input:focus,.settings-form input:focus{border-color:var(--star-blue);box-shadow:0 0 0 3px rgba(20,120,232,.1)}
+.text-button{color:var(--star-blue)}
+.primary-button{background:var(--star-gradient);color:var(--star-navy-deep);box-shadow:0 8px 20px rgba(255,90,31,.12)}
+.primary-button:hover{box-shadow:0 10px 26px rgba(255,90,31,.2)}
+.secondary-button{border-color:rgba(8,38,68,.18);color:var(--star-navy);background:#fff}.secondary-button:hover{border-color:var(--star-blue);color:var(--star-blue)}
+.ghost-button{border-color:rgba(8,38,68,.18);color:var(--star-navy)}.ghost-button:hover{border-color:var(--star-blue);background:var(--star-blue-soft)}
+.portal-shell{background:#f5f7f8}.sidebar{background:linear-gradient(180deg,var(--star-navy-deep),var(--star-navy))}.sidebar-brand{color:#fff}
+.brand-star{background:linear-gradient(135deg,var(--star-orange),var(--star-gold),var(--star-blue));color:var(--star-navy-deep)}
+.nav-item{color:#b8c7d4}.nav-item:hover{background:rgba(20,120,232,.12);color:#fff}.nav-item.active{background:rgba(20,120,232,.16);color:#fff;box-shadow:inset 3px 0 0 var(--star-blue)}
+.support-card{border-color:rgba(110,179,255,.18);background:rgba(20,120,232,.08)}.support-card p{color:#aebfcd}.support-icon,.light-text{color:#6eb3ff}.logout-button{color:#9eb0be;border-color:rgba(110,179,255,.14)}
+.main-content{background:linear-gradient(180deg,#f7f9fa,#f5f7f8)}.topbar{border-color:#dce5ec}.topbar h2,.welcome-row h3,.panel h4,.project-card h4,.adzilla-hero h3{color:var(--star-navy)}
+.icon-button{border-color:var(--star-line);color:var(--star-navy)}.avatar{background:linear-gradient(135deg,var(--star-orange),var(--star-gold),var(--star-blue));color:var(--star-navy-deep)}
+.mobile-topbar{background:rgba(255,249,242,.94);border-color:var(--star-line)}.mobile-brand,.menu-button{color:var(--star-navy)}
+.stat-card,.panel,.project-card,.billing-summary article{border-color:var(--star-line);box-shadow:0 8px 30px rgba(8,38,68,.045)}
+.stat-card strong,.billing-summary strong{color:var(--star-navy)}.featured-panel{background:linear-gradient(145deg,#fff,var(--star-cream))}.campaign-summary div{background:#f2f6f9}
+.progress-track{background:#e3eaf0}.progress-track span{background:linear-gradient(90deg,var(--star-blue),#55a5ff,var(--star-orange))}.activity-dot{background:var(--star-blue)}
+.project-icon.web{background:var(--star-blue-soft);color:var(--star-blue)}.project-icon.ad{background:#fff0e8;color:var(--star-orange)}
+.status-pill.info{color:#0d5eb9;background:var(--star-blue-soft)}.status-pill.warning{color:#9b531c;background:#fff2e8}.status-pill.success{color:#286a45;background:#edf8f2}
+.adzilla-hero{background:linear-gradient(120deg,#fff4ec 0%,#fff9ef 60%,#eef6ff 100%);border-color:#dfe8ef}.campaign-stepper{border-color:var(--star-line)}
+.step.complete:not(:last-child)::after{background:linear-gradient(90deg,var(--star-orange),var(--star-blue))}.step.complete span{background:var(--star-orange)}.step.current span{background:var(--star-blue-soft);border-color:var(--star-blue);color:var(--star-blue)}
+.upload-box{border-color:#bfd1df;background:#f8fbfd}.upload-box:hover{border-color:var(--star-blue);background:var(--star-blue-soft)}.upload-icon{background:var(--star-blue-soft);color:var(--star-blue)}
+.uploaded-file{background:#f1f5f8}.inventory-card{border-color:var(--star-line);background:#fff}.inventory-card.popular{border-color:#ffb17f;background:#fff7f2}
+.inventory-card.premium{background:var(--star-navy);border-color:var(--star-navy);color:#fff}.inventory-card.premium span,.inventory-card.premium small{color:#c4d2de}.inventory-card em{background:var(--star-orange)}
+.file-row,.invoice-row{border-color:#e2e9ee}.file-row.header,.invoice-row.header{background:#f1f5f8}.toast{background:var(--star-navy-deep)}
+html body .reservation-tab{border-color:#cbd8e2;color:var(--star-navy);background:#fff}html body .reservation-tab:hover{border-color:var(--star-blue);color:var(--star-blue)}html body .reservation-tab.active{background:var(--star-navy);border-color:var(--star-navy);color:#fff}
+html body .campaign-market-card,html body .availability-option,html body .my-campaign-row{border-color:var(--star-line)}html body .campaign-market-top h4,html body .availability-option .size-name,html body .availability-option .count,html body .my-campaign-row strong{color:var(--star-navy)}
+html body .availability-option button{background:var(--star-navy)}html body .availability-option button:hover:not(:disabled){background:var(--star-blue)}html body .availability-option.sold-out{background:#f3f6f8;color:#8798a7}
+html body .campaign-market-footer{border-color:#e2e9ee}html body .reservation-empty{border-color:#bfd0dc;background:var(--star-paper)}html body .reservation-modal-backdrop{background:rgba(5,26,48,.62)}
+html body .reservation-modal{box-shadow:0 30px 90px rgba(5,26,48,.28)}html body .reservation-modal h3{color:var(--star-navy)}html body .reservation-close{background:var(--star-blue-soft);color:var(--star-navy)}
+html body .reservation-form input,html body .reservation-form select{border-color:#cbd8e2;color:var(--star-ink)}html body .reservation-form input:focus,html body .reservation-form select:focus{outline:2px solid rgba(20,120,232,.2);border-color:var(--star-blue)}
+html body .reservation-summary{background:linear-gradient(120deg,var(--star-cream),var(--star-blue-soft));border-color:#d7e2eb}html body .reservation-cancel{border-color:#cbd8e2;color:var(--star-navy)}html body .reservation-confirm{background:var(--star-gradient);color:var(--star-navy-deep)}
+@media(max-width:800px){.login-panel{background:radial-gradient(circle at 75% 10%,rgba(20,120,232,.1),transparent 28%),var(--star-cream)}}
