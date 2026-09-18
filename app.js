@@ -380,7 +380,10 @@ navItems.forEach(item => {
 });
 
 document.querySelectorAll('[data-jump]').forEach(button => {
-  button.addEventListener('click', () => switchView(button.dataset.jump));
+  button.addEventListener('click', () => {
+    switchView(button.dataset.jump);
+    if (button.dataset.jump === 'adzilla') setReservationTab('mine');
+  });
 });
 
 document.getElementById('forgotPassword')?.addEventListener('click', () => {
