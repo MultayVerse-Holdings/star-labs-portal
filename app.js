@@ -70,26 +70,6 @@ function ensureReservationStyles() {
   document.head.appendChild(link);
 }
 
-function normalizeAdzillaTerminology() {
-  const replacements = new Map([
-    ['East Orlando Adzilla — September Drop', 'East Orlando Adzilla — September Campaign'],
-    ['Medium ad · September Drop', 'Medium ad · September Campaign'],
-    ['East Orlando — September Drop', 'East Orlando — September Campaign'],
-    ['Browse upcoming drops', 'Browse upcoming campaigns']
-  ]);
-
-  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-  const textNodes = [];
-  while (walker.nextNode()) textNodes.push(walker.currentNode);
-
-  textNodes.forEach(node => {
-    const value = node.nodeValue.trim();
-    if (replacements.has(value)) {
-      node.nodeValue = node.nodeValue.replace(value, replacements.get(value));
-    }
-  });
-}
-
 function getCampaigns() {
   try {
     const saved = JSON.parse(localStorage.getItem('starLabsAdzillaCampaigns'));
@@ -462,7 +442,6 @@ document.addEventListener('click', event => {
 });
 
 ensureReservationStyles();
-normalizeAdzillaTerminology();
 buildReservationHub();
 
 if (localStorage.getItem('starLabsPortalDemoSession') === '1') {
